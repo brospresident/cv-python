@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> {{ title }} </title>
+    </head>
+    <body>
+        {% extends "header.html" %}
+ 
+        {% block content %}
+        <div class = "bg-light">
+            <h1 class = "text-center">Hello, I am Surcel Ioan-Eduard!</h1>
+        </div>
+        <div class = "bg-dark">
+            <h1 class = "text-center text-light">Work experience: </h1>
+            {% for w in work %}
+            <div>
+                <p class = "text-center text-light">Post ocupat: {{w.position}}</p>
+                <p class = "text-center text-light">Companie: {{w.company}}</p>    
+                <p class = "text-center text-light">Perioada: {{w.period}}</p>
+                <br>            
+            </div>
+            {% endfor %}
+        </div>
+        <div class = "bg-danger">
+            <h1 class = "text-center text-light">Education: </h1>
+            {% for e in edu %}
+            <div>
+                <p class = "text-center text-light">Unde: {{e.unde}}</p>  
+                <p class = "text-center text-light">Perioada: {{e.perioada}}</p>
+                <br>            
+            </div>
+            {% endfor %}
+        </div>
+        {% endblock %}
+    </body>
+
+</html>
